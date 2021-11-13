@@ -1,17 +1,19 @@
 <template>
   <div class="home">
-    <test></test>
     <discount></discount>
     <shop></shop>
+    <features></features>
+    <products></products>
   
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Test from '@/components/Test.vue'
 import Shop from '@/components/Shop'
 import Discount from '../components/Discount.vue'
+import Features from '../components/Features.vue'
+import Products from '../components/Products.vue'
 
 
 
@@ -20,9 +22,10 @@ export default {
   name: 'Home',
 
   components: {
-    Test,
     Shop,
     Discount,
+    Features,
+    Products
   }
 }
 

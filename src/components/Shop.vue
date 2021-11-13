@@ -15,7 +15,7 @@
 
 <script>
 import ShopCollection from '@/models/ShopCollection'
-import { Gelato} from '@/models/ShopItems'
+import { Gelato, Sorbetto} from '@/models/ShopItems'
 import ShopItem from '@/components/ShopItem'
 
 export default {
@@ -31,8 +31,8 @@ export default {
 	data() {
 		return {
 			shop: new ShopCollection()
-				.addItem(new Gelato('Chocolate', 'Really good chocolate dessert', 9.99))
-				.addItem(new Gelato('Chocolate', 'Really good chocolate dessert', 9.99))
+				.addItem(new Gelato('Vanilla', 'Really good chocolate dessert', 9.99))
+				.addItem(new Sorbetto('Chocolate', 'Really good sorbetto dessert', 8.99))
 				.addItem(new Gelato('Chocolate', 'Really good chocolate dessert', 9.99))
 				.addItem(new Gelato('Chocolate', 'Really good chocolate dessert', 9.99))
 				.addItem(new Gelato('Chocolate', 'Really good chocolate dessert', 9.99))

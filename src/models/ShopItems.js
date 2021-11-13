@@ -1,6 +1,6 @@
 function ShopItem(record){
     record.id = Math.floor(Math.random() * 10e16);
-    
+
     return record;
 }
 
@@ -10,13 +10,12 @@ function Gelato(title, genre, pages){
     this.pages = pages;
 }
 
-class Movie {
-    constructor(title, genre, runningTime) {
+function Sorbetto (title, genre, runningTime){
         this.title = title || 'Default Title';
         this.genre = genre || '';
         this.runningTime = runningTime;
-    }
 }
+
 
 function Album(title, artist, trackCount){
     this.title = title || 'Default Title';
@@ -24,4 +23,8 @@ function Album(title, artist, trackCount){
     this.trackCount = trackCount;
 }
 
-export {ShopItem, Gelato, Movie, Album};
+
+
+
+
+export {ShopItem, Gelato, Sorbetto, Album};

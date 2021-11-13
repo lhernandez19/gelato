@@ -14,12 +14,14 @@
 
 <script>
 import Gelato from "@/components/Gelato";
+import Sorbetto from "@/components/Sorbetto";
 
 
 export default {
   name: "ShopItem",
   components: {
     Gelato,
+	Sorbetto
 
   },
   props: {
