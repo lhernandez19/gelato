@@ -1,14 +1,12 @@
 <template>
     <div>
-        <my-login></my-login>
+        <h1>This is the shop page!</h1>
     </div>
 </template>
 
 <script>
-import MyLogin from '../components/MyLogin.vue'
-
 export default {
-    name: 'GelatoLogin',
+    name: 'Shop',
 
     data() {
         return {
@@ -20,8 +18,8 @@ export default {
         
     },
 
-    components: {
-        MyLogin,
+    methods: {
+        
     },
 };
 </script>
