@@ -1,31 +1,38 @@
 <template>
-	<div></div>
+	<div>
+		<p v-for="product in products" :key="product.id">{{product.name}}</p>
+	</div>
 </template>
 
 <script>
-import db from '../firebase/firebase.js'
+import db from '../firebase/Firebase.js'
 export default {
-	name: 'GelatoMyinventory',
+	name: 'MyInventory',
 
 	data() {
 		return {
 			products: [],
 		}
 	},
-	created() {
-		db.collection('gelatos')
-			.get()
-			.then(querySnapshot => {
-				querySnapshot.forEach(doc => {
-					const data = {
-                        'description': doc.data().description,
-                        'name': doc.data().name,
-                        'price': doc.data().price,
-					}
-                    this.products.push(data)
-				})
-			})
+	
+	firestore: {
+		products: db.collection('gelatos')
 	},
+
+	// created() {
+	// 	db.collection('gelatos')
+	// 		.onSnapshot(querySnapshot => {
+	// 			querySnapshot.forEach(doc => {
+	// 				const data = {
+    //                     'id': doc.id,
+    //                     'description': doc.data().description,
+    //                     'name': doc.data().name,
+    //                     'price': doc.data().price,
+	// 				}
+    //                 this.products.push(data)
+	// 			})
+	// 		})
+	// },
 
 	mounted() {},
 
